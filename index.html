@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF 만화 뷰어</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+    <div class="viewer-container">
+        <div class="toolbar">
+            <button id="prevBtn" class="nav-btn">◀ 이전</button>
+            <span class="page-info">
+                <span id="currentPage">1</span> / <span id="totalPages">-</span>
+            </span>
+            <button id="nextBtn" class="nav-btn">다음 ▶</button>
+        </div>
+        
+        <div id="swipe-container" class="swipe-container">
+            <div id="swipe-wrapper" class="swipe-wrapper">
+                <!-- PDF 페이지들이 여기에 동적으로 추가됩니다 -->
+            </div>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>PDF를 불러오는 중...</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
